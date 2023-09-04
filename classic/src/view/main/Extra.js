@@ -1,25 +1,42 @@
 Ext.define("MyApp.view.main.Extra", {
-  // Filen filväg: MyApp.view.main.Extra
-  extend: "Ext.container.Container", // Använder container från Sencha
-  xtype: "Extra", // Namn på huvudkomponent
-  controller: "extra", // Gör så att det vi vill skall hända i ExtraController.js funkar. Se "alias" i den filen.
-  // Kan vara blandat. Allt från komponenter, object osv
-  items: [
+  extend: "Ext.grid.Panel",
+  xtype: "extra",
+  title: "Grid",
+  store: [
     {
-      title: "Extra view",
-      html: " Dom will be here",
+      name: "Jean Luc",
+      email: "jeanluc.picard@enterprise.com",
+      phone: "555-111-1111",
     },
     {
-      xtype: "button",
-      name: "click",
-      text: "Call Controller",
-      itemId: "callController",
+      name: "Worf",
+      email: "worf.moghsson@enterprise.com",
+      phone: "555-222-2222",
     },
     {
-      xtype: "button",
-      name: "another",
-      text: "Another Button",
-      itemId: "anotherId",
+      name: "Deanna",
+      email: "deanna.troi@enterprise.com",
+      phone: "555-333-3333",
+    },
+    { name: "Data", email: "mr.data@enterprise.com", phone: "555-444-4444" },
+  ],
+  columns: [
+    {
+      text: "Name",
+      dataIndex: "name",
+      flex: 1, // Kan göra styling direkt i objektet
+    },
+    {
+      text: "Email",
+      dataIndex: "email",
+      flex: 1,
+    },
+    {
+      text: "Phone",
+      dataIndex: "phone",
+      flex: 1,
     },
   ],
+  height: 300,
+  width: 400,
 });
