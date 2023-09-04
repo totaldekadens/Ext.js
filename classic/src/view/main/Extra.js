@@ -2,24 +2,7 @@ Ext.define("MyApp.view.main.Extra", {
   extend: "Ext.grid.Panel",
   xtype: "extra",
   title: "Grid",
-  store: [
-    {
-      name: "Jean Luc",
-      email: "jeanluc.picard@enterprise.com",
-      phone: "555-111-1111",
-    },
-    {
-      name: "Worf",
-      email: "worf.moghsson@enterprise.com",
-      phone: "555-222-2222",
-    },
-    {
-      name: "Deanna",
-      email: "deanna.troi@enterprise.com",
-      phone: "555-333-3333",
-    },
-    { name: "Data", email: "mr.data@enterprise.com", phone: "555-444-4444" },
-  ],
+  store: { type: "extra" }, // Hämtar datan från MyApp.store.Extra. Se alias i den filen (store.extra).
   columns: [
     {
       text: "Name",
